@@ -15,11 +15,15 @@
         h2 {
             background-color: lightgray;
             font-size: large;
-            text-align: center
+            text-align: left
         }
 
         .usd-field:focus {
             background: lightblue;
+        }
+
+        .center {
+           text-align: center;
         }
 
         table,
@@ -27,12 +31,12 @@
         td {
             border: 1px solid;
             border-collapse: collapse;
+            padding: 3px;
+        }
+        .test {
+           text-align: right;
         }
 
-        th,
-        td {
-            padding: 5px;
-        }
     </style>
 
     <title>Homework 2, Extra Credit</title>
@@ -94,7 +98,7 @@
                     <input type="text" id="usd" size="10" nput class="usd-field" autofocus>
                 </td>
             </tr>
-            <td colspan="3">
+            <td colspan="3" style = "center">
                 <input type="button" id="convert" value="Convert!">
             </td>
 

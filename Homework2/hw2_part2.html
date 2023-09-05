@@ -1,33 +1,77 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="hw2" content="CS 114 | Homework Assignment 2 | Sam Underwood">
-<title></title>
+    <meta charset="utf-8">
+    <meta name="hw2" content="CS 114 | Homework Assignment 2, Part 2 | Sam Underwood">
+    <title>Assignment 2, Part 2</title>
+
+    <style>
+        body {
+            background-color: lightgray;
+        }
+    </style>
+
+    <script src="process.js" async></script>
+
+
+
+
 </head>
+
 <body>
 
-    <script>
+    <section class="body">
+        <h3>Homework 2, part 2</h3>
 
+        <form name="numInput">
+            <table>
+                <tr>
+                    <td>Enter an integer</td>
+                    <td><input type="text" name="int1" size="5"></td>
+                </tr>
 
-    </script>
+                <tr>
+                    <td>Enter an integer</td>
+                    <td><input type="text" name="int2" size="5"></td>
+                </tr>
 
-    <br>
-    <a href="hw2_part1.html">Part 1</a><br>
-    <a href="hw2_EC.html">Extra Credit</a><br>
-    <a href="hw1.html">Back to Main Page</a><br>
+                <tr>
+                    <td>Enter an integer</td>
+                    <td><input type="text" name="int3" size="5"></td>
+                </tr>
 
+                <tr>
+                    <td>Sum is:</td>
+                    <td><input type="text" name="sum" size="15" readonly></td>
+                </tr>
 
-<header>
-</header>
+                <tr>
+                    <td>Product is:</td>
+                    <td><input type="text" name="product" size="15" readonly></td>
+                </tr>
 
-<section>
-</section>
+                <tr>
+                    <td>Average is:</td>
+                    <td><input type="text" name="average" size="15" readonly></td>
+                </tr>
 
-<footer>
-</footer>
+                <tr>
+                    <td>Min is:</td>
+                    <td><input type="text" name="min" size="5" readonly></td>
+                </tr>
+                <tr>
+                    <td>Max is:</td>
+                    <td><input type="text" name="max" size="5" readonly></td>
+                </tr>
 
+            </table>
+            <br><br>
+
+            <input type="button" id="process" value="Submit">
+            <input type="reset" value="Reset form">
+        </form>
+    </section>
 </body>
 
 </html>
