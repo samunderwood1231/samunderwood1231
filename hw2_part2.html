@@ -1,48 +1,77 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="hw2" content="CS 114 | Homework Assignment 2 | Sam Underwood">
-<title></title>
+    <meta charset="utf-8">
+    <meta name="hw2" content="CS 114 | Homework Assignment 2, Part 2 | Sam Underwood">
+    <title>Assignment 2, Part 2</title>
+
+    <style>
+        body {
+            background-color: lightgray;
+        }
+    </style>
+
+    <script src="process.js" async></script>
+
+
+
+
 </head>
+
 <body>
 
-    <script>
-/*
-Create a webpage with a form that will have:
-three input boxes for the user to type three integers (numbers)
-a button to process the data (numbers) typed by the user
-a button to clear the form
-a textarea to display the results of the process (or it can be a div or paragraph element)
-You will write the JavaScript code that will:
-receive the data from those three input boxes for the three integers after the user click on the button to process the data
-you will calculate the sum, the average, and the product of the three integers
-you will also calculate the smallest and the largest of the three integers typed
-TIP: For finding the smallest and largest number, use the Math Object Methods of min and max
-you will present the results of these calculations in the text area - DO NOT USE ALERT BOXES!!!
-your script should not present any result if the user does not type NUMBERS in the input boxes and, instead, you should present an error message in the textarea
-*/
+    <section class="body">
+        <h3>Homework 2, part 2</h3>
 
+        <form name="numInput">
+            <table>
+                <tr>
+                    <td>Enter an integer</td>
+                    <td><input type="text" name="int1" size="5"></td>
+                </tr>
 
+                <tr>
+                    <td>Enter an integer</td>
+                    <td><input type="text" name="int2" size="5"></td>
+                </tr>
 
-    </script>
+                <tr>
+                    <td>Enter an integer</td>
+                    <td><input type="text" name="int3" size="5"></td>
+                </tr>
 
-    <br>
-    <a href="hw2_part1.html">Part 1</a><br>
-    <a href="hw2_EC.html">Extra Credit</a><br>
-    <a href="hw1.html">Back to Main Page</a><br>
+                <tr>
+                    <td>Sum is:</td>
+                    <td><input type="text" name="sum" size="15" readonly></td>
+                </tr>
 
+                <tr>
+                    <td>Product is:</td>
+                    <td><input type="text" name="product" size="15" readonly></td>
+                </tr>
 
-<header>
-</header>
+                <tr>
+                    <td>Average is:</td>
+                    <td><input type="text" name="average" size="15" readonly></td>
+                </tr>
 
-<section>
-</section>
+                <tr>
+                    <td>Min is:</td>
+                    <td><input type="text" name="min" size="5" readonly></td>
+                </tr>
+                <tr>
+                    <td>Max is:</td>
+                    <td><input type="text" name="max" size="5" readonly></td>
+                </tr>
 
-<footer>
-</footer>
+            </table>
+            <p>
 
+            <input type="button" id="process" value="Submit">
+            <input type="reset" value="Reset form">
+        </form>
+    </section>
 </body>
 
 </html>
