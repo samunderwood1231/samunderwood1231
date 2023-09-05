@@ -15,12 +15,28 @@
         h2 {
             background-color: lightgray;
             font-size: large;
-            text-align: center
+            text-align: left
         }
 
         .usd-field:focus {
             background: lightblue;
         }
+
+        .center {
+           text-align: center;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid;
+            border-collapse: collapse;
+            padding: 3px;
+        }
+        .test {
+           text-align: right;
+        }
+
     </style>
 
     <title>Homework 2, Extra Credit</title>
@@ -31,13 +47,14 @@
     <form id="currency" name="Currency Converter">
 
         <table>
-            <thead>
-                <tr>
-                    <td>Currency</td>
-                    <td>Rate</td>
-                    <td>Value</td>
-                </tr>
-            </thead>
+
+            <td colspan="3">
+            </td>
+            <tr>
+                <td>Currency</td>
+                <td>Rate</td>
+                <td>Value</td>
+            </tr>
             </tr>
             <td>Euro</td>
             <td>0.84</td>
@@ -76,17 +93,12 @@
             </tr>
             <tr>
                 <td>Enter Amount in US Dollars</td>
-                <td>
+                <td>1.00</td>
                 <td>
                     <input type="text" id="usd" size="10" nput class="usd-field" autofocus>
                 </td>
             </tr>
-
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
+            <td colspan="3" style = "center">
                 <input type="button" id="convert" value="Convert!">
             </td>
 
@@ -94,8 +106,8 @@
         </table>
     </form>
 
-    <a href="hw2_part1.html">Part 1</a><br>
-    <a href="hw2_part2.html">Part 2</a><br>
+    <a href="Homework2\hw2_part1.html">Part 1</a><br>
+    <a href="Homework2\hw2_part2.html">Part 2</a><br>
     <a href="hw1.html">Back to Main Page</a>
 
 

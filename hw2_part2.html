@@ -14,9 +14,6 @@
 
     <script src="process.js" async></script>
 
-
-
-
 </head>
 
 <body>
@@ -30,7 +27,6 @@
                     <td>Enter an integer</td>
                     <td><input type="text" name="int1" size="5"></td>
                 </tr>
-
                 <tr>
                     <td>Enter an integer</td>
                     <td><input type="text" name="int2" size="5"></td>
@@ -40,34 +36,36 @@
                     <td>Enter an integer</td>
                     <td><input type="text" name="int3" size="5"></td>
                 </tr>
-
                 <tr>
-                    <td>Sum is:</td>
-                    <td><input type="text" name="sum" size="15" readonly></td>
-                </tr>
+                    <td>Sum:</td>
 
-                <tr>
-                    <td>Product is:</td>
-                    <td><input type="text" name="product" size="15" readonly></td>
                 </tr>
+                <td> <textarea id="sum" readonly></textarea></td>
+                </td>
+                <tr>
+                    <td>Product:</td>
+                </tr>
+                <td> <textarea id="product" readonly></textarea></td>
+                </td>
+                <tr>
+                    <td>Average:</td>
+                </tr>
+                <td> <textarea id="average" readonly></textarea></td>
+                </td>
+                <tr>
+                    <td>Minimum:</td>
 
-                <tr>
-                    <td>Average is:</td>
-                    <td><input type="text" name="average" size="15" readonly></td>
                 </tr>
+                <td> <textarea id="min" readonly></textarea></td>ß
+                </td>
+                <tr>
+                <tr>
+                    <td>Maximum:</td>
 
-                <tr>
-                    <td>Min is:</td>
-                    <td><input type="text" name="min" size="5" readonly></td>
                 </tr>
-                <tr>
-                    <td>Max is:</td>
-                    <td><input type="text" name="max" size="5" readonly></td>
-                </tr>
-
+                <td> <textarea id="max" readonly></textarea></td>
+                </td>
             </table>
-            <p>
-
             <input type="button" id="process" value="Submit">
             <input type="reset" value="Reset form">
         </form>
