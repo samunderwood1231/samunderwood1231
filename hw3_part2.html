@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="javascript and html exercises for san mateo college course cs 114">
+
+    <script src="sales.js" async>
+    </script>
+
+    <style>
+        body,
+        h2 {
+            background-color: lightgray;
+            font-size: large;
+            text-align: left
+        }
+
+        .seller-field:focus {
+            background: lightblue;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        table,
+        td {
+            border: 1px solid;
+            border-collapse: collapse;
+            padding: 3px;
+            text-align: center;
+        }
+
+        .longButton {
+            display: block;
+            width: 100%;
+        }
+    </style>
+
+    <title>Homework Assignment 3, Part 2</title>
+</head>
+
+<body>
+    <section>
+        <h1>Homework Assignment 3, Part 2</h1>
+        <form id="salesInput" name="Seller Information">
+
+            <table>
+                <caption>Seller Name</caption>
+                <tr>
+
+                    <td>Name</td>
+
+                    <td> <input type=text id="name" class="seller-field" autofocus size=20></td>
+                </tr>
+
+            </table>
+            <br>
+            For each item below, input quantity sold:
+
+            <br>
+            <br>
+
+            <table id =salesInput>
+                <caption>Sales Input Data</caption>
+                <th>Item</th>
+                <th>Number Sold</th>
+                <tr>
+                    <td>Item 1 </td>
+                    <td> <input type=text id="item1" size=20></td>
+
+                </tr>
+                <tr>
+                    <td>Item 2 </td>
+                    <td> <input type=text id="item2" size=20></td>
+
+                </tr>
+                <tr>
+                    <td>Item 3 </td>
+                    <td> <input type=text id="item3" size=20></td>
+                </tr>
+                <tr>
+                    <td>Item 4 </td>
+                    <td> <input type=text id="item4" size=20></td>
+                </tr>
+                <tr>
+                    <td colspan=2><input type="button" button class=longButton size=20 id="submit" value="submit"></td>
+                </tr>
+
+            </table>
+</form>
+            <br>
+
+            <form id = salesOutput>
+            <table>
+                <caption>Sales Output Data</caption>
+                <th>Item</th>
+                <th>Number Sold</th>
+                <th>Cost per item (USD)</th>
+                <th>Revenue (USD)</th>
+                <tr>
+                    <td>Item 1 </td>
+                    <td> <input type=text id="item1" size=20 readonly></td>
+                    <td><input type=text id="item1Cost" size=20 value="20.99" readonly></td>
+                    <td><input type=text id="revenue1" size=20 readonly></td>
+                </tr>
+                <tr>
+                    <td>Item 2 </td>
+                    <td> <input type=text id="item2" size=20 readonly></td>
+                    <td><input type=text id="item2Cost" size=20 value="12.75" readonly></td>
+                    <td><input type=text id="revenue2" size=20 readonly></td>
+                </tr>
+                <tr>
+                    <td>Item 3 </td>
+                    <td> <input type=text id="item3" size=20 readonly></td>
+                    <td><input type=text id="item3Cost" size=20 value="9.95" readonly></td>
+                    <td><input type=text id="revenue3" size=20 readonly></td>
+                </tr>
+                <tr>
+                    <td>Item 4 </td>
+                    <td> <input type=text id="item4" size=20 readonly></td>
+                    <td><input type=text id="item4Cost" size=20 value="35.89" readonly></td>
+                    <td><input type=text id="revenue4" size=20 readonly></td>
+                </tr>
+
+                <td colspan=2></td>
+
+                <td>Total:</td>
+                <td><input type=text id="totalRevenue" size=20 readonly></td>
+                <tr>
+                    <td colspan=2>Weekly Earnings <br>
+                    (salary + commission): </td>
+                    <td colspan=2> <textarea id="weeklyEarnings" cols = 36 rows = 10 readonly>  </textarea></td>
+                </tr>
+
+
+            </table>
+
+            <input type="reset" id="reset" value="Reset">
+            <br>
+            <br>
+
+
+        </form>
+    </section>
+
+    <section>
+        <a href="hw3_part1.html">Part 1</a><br>
+        <a href="hw3_EC.html">Extra Credit</a><br>
+        <a href="hw3.html">Homework 3 Main Page</a><br>
+        <a href="hw1.html">Back to Index</a>
+
+    </section>
+
+
+</body>
+
+</html>
