@@ -18,6 +18,7 @@ function score() {
 
     factor1 = parseInt(document.forms["factors"].elements["factor1"].value);
     factor2 = parseInt(document.forms["factors"].elements["factor2"].value);
+    
     let userAnswer = parseInt(document.forms["answer"].elements["answer"].value);
     if (isNaN(userAnswer)) {
         document.forms["answer"].elements["isCorrect"].value = "Enter a number!";

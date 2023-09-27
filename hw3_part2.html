@@ -16,10 +16,6 @@
             text-align: left
         }
 
-        .seller-field:focus {
-            background: lightblue;
-        }
-
         .center {
             text-align: center;
         }
@@ -52,7 +48,7 @@
 
                     <td>Name</td>
 
-                    <td> <input type=text id="name" class="seller-field" autofocus size=20></td>
+                    <td> <input type=text id="name" autofocus size=20></td>
                 </tr>
 
             </table>
@@ -85,7 +81,11 @@
                     <td> <input type=text id="item4" size=20></td>
                 </tr>
                 <tr>
-                    <td colspan=2><input type="button" button class=longButton size=20 id="submit" value="submit"></td>
+                    <td colspan=2><input type="button" button class=longButton size=20 id="submit" value="Submit"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><input type="reset" button class=longButton id="reset" value="Reset"></td>
                 </tr>
 
             </table>
@@ -137,7 +137,7 @@
 
             </table>
 
-            <input type="reset" id="reset" value="Reset">
+
             <br>
             <br>
 
