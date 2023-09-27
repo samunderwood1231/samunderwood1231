@@ -12,25 +12,25 @@ function sales() {
 
 
   if (isNaN(item1)) {
-    document.forms["salesOutput"].elements["item1"].value = "Please enter a number";
+    document.forms["salesOutput"].elements["thisItem1"].value = "Please enter a number";
     nanError = true;
   } else {
-    document.forms["salesOutput"].elements["item1"].value = item1;
+    document.forms["salesOutput"].elements["thisItem1"].value = item1;
   } if (isNaN(item2)) {
-    document.forms["salesOutput"].elements["item2"].value = "Please enter a number";
+    document.forms["salesOutput"].elements["thisItem2"].value = "Please enter a number";
     nanError = true;
   } else {
-    document.forms["salesOutput"].elements["item2"].value = item2;
+    document.forms["salesOutput"].elements["thisItem2"].value = item2;
   } if (isNaN(item3)) {
     nanError = true;
-    document.forms["salesOutput"].elements["item3"].value = "Please enter a number";
+    document.forms["salesOutput"].elements["thisItem3"].value = "Please enter a number";
   } else {
-    document.forms["salesOutput"].elements["item3"].value = item3;
+    document.forms["salesOutput"].elements["thisItem3"].value = item3;
   } if (isNaN(item4)) {
     nanError = true;
-    document.forms["salesOutput"].elements["item4"].value = "Please enter a number";
+    document.forms["salesOutput"].elements["thisItem4"].value = "Please enter a number";
   } else {
-    document.forms["salesOutput"].elements["item4"].value = item4;
+    document.forms["salesOutput"].elements["thisItem4"].value = item4;
   }
 
   if (nanError) {

@@ -54,14 +54,15 @@
             <br>
             <br>
 
-            <table id=salesInput>
+            <table>
                 <caption>Sales Input Data</caption>
-                <th>Item</th>
-                <th>Number Sold</th>
+                <tr>
+                    <td>Item</td>
+                    <td>Number Sold</td>
+                </tr>
                 <tr>
                     <td>Item 1 </td>
                     <td> <input type=text id="item1" size=20></td>
-
                 </tr>
                 <tr>
                     <td>Item 2 </td>
@@ -91,31 +92,33 @@
         <form id=salesOutput>
             <table>
                 <caption>Sales Output Data</caption>
-                <th>Item</th>
-                <th>Number Sold</th>
-                <th>Cost per item (USD)</th>
-                <th>Revenue (USD)</th>
+                <tr>
+                <td>Item</td>
+                <td>Number Sold</td>
+                <td>Cost per item (USD)</td>
+                <td>Revenue (USD)</td>
+                </tr>
                 <tr>
                     <td>Item 1 </td>
-                    <td> <input type=text id="item1" size=20 readonly></td>
+                    <td> <input type=text id="thisItem1" size=20 readonly></td>
                     <td><input type=text id="item1Cost" size=20 value="20.99" readonly></td>
                     <td><input type=text id="revenue1" size=20 readonly></td>
                 </tr>
                 <tr>
                     <td>Item 2 </td>
-                    <td> <input type=text id="item2" size=20 readonly></td>
+                    <td> <input type=text id="thisItem2" size=20 readonly></td>
                     <td><input type=text id="item2Cost" size=20 value="12.75" readonly></td>
                     <td><input type=text id="revenue2" size=20 readonly></td>
                 </tr>
                 <tr>
                     <td>Item 3 </td>
-                    <td> <input type=text id="item3" size=20 readonly></td>
+                    <td> <input type=text id="thisItem3" size=20 readonly></td>
                     <td><input type=text id="item3Cost" size=20 value="9.95" readonly></td>
                     <td><input type=text id="revenue3" size=20 readonly></td>
                 </tr>
                 <tr>
                     <td>Item 4 </td>
-                    <td> <input type=text id="item4" size=20 readonly></td>
+                    <td> <input type=text id="thisItem4" size=20 readonly></td>
                     <td><input type=text id="item4Cost" size=20 value="35.89" readonly></td>
                     <td><input type=text id="revenue4" size=20 readonly></td>
                 </tr>
