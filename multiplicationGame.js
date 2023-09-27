@@ -25,7 +25,7 @@ function score() {
     } else {
         rightAnswer = factor1 * factor2;
         if (userAnswer == rightAnswer) {
-            document.forms["answerInput"].elements["isCorrect"].value = "Correct!";
+            document.forms["answerInput"].elements["isCorrect"].value = "Very good!";
             const newButton = document.createElement('button');
             newButton.textContent = 'Generate another problem!';
             newButton.id = "newButton";
