@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script src="multiplicationGame.js" async></script>
+
+<style>
+    body,
+    h2 {
+        background-color: lightgray;
+        font-size: large;
+        text-align: center;
+    }
+
+    .seller-field:focus {
+        background: lightblue;
+    }
+
+    table,
+    td {
+        border: 2px solid;
+        border-collapse: collapse;
+        padding: 10px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .longButton {
+        display: block;
+        width: 100%;
+    }
+</style>
+
+<title>Homework Assignment 3, Extra Credit</title>
+
+</head>
+
+<body>
+
+    <header>
+    </header>
+
+    <h1>Homework Assignment 3, Extra Credit - Multiplication Game</h1>
+
+    <section>
+        <table>
+            <form id = "factors">
+            <tr>
+                <td>Factor 1</td>
+                <td><input type = "text" id ="factor1" size = "15" ></td>
+            </tr>
+            <tr>
+                <td>Factor 2</td>
+                <td><input type = "text" id ="factor2" size = "15" ></td>
+            </tr>
+        </form>
+<tr>
+    <td colspan = 2> Enter your answer below: </td>
+</tr>
+<tr>
+    <form id = "answer">
+    <td colspan = 2> <input type = "text" id ="answer" size = "15" > </td>
+
+</tr>
+<tr>
+    <td colspan = 2> <input type = "button" button class = longButton id = "submit" value = "Check your Answer"> </td>
+</tr>
+
+<tr>
+   <td><textarea id = "isCorrect"></textarea></td>
+   <td></td>
+</form>
+</tr>
+<tr>
+
+</tr>
+
+        </table>
+
+
+    </section>
+
+    <footer>
+    </footer>
+
+</body>
+
+</html>

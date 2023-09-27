@@ -16,20 +16,17 @@ function sales() {
     nanError = true;
   } else {
     document.forms["salesOutput"].elements["item1"].value = item1;
-  }
-  if (isNaN(item2)) {
+  } if (isNaN(item2)) {
     document.forms["salesOutput"].elements["item2"].value = "Please enter a number";
     nanError = true;
   } else {
     document.forms["salesOutput"].elements["item2"].value = item2;
-  }
-  if (isNaN(item3)) {
+  } if (isNaN(item3)) {
     nanError = true;
     document.forms["salesOutput"].elements["item3"].value = "Please enter a number";
   } else {
     document.forms["salesOutput"].elements["item3"].value = item3;
-  }
-  if (isNaN(item4)) {
+  } if (isNaN(item4)) {
     nanError = true;
     document.forms["salesOutput"].elements["item4"].value = "Please enter a number";
   } else {
@@ -40,17 +37,15 @@ function sales() {
     calcRevenue(item1, item2, item3, item4);
     printRevenue(revenue1, revenue2, revenue3, revenue4);
     calcEarnings(revenue1, revenue2, revenue3, revenue4);
-    totalRevenue = totalRevenue / 100;
-    document.forms["salesOutput"].elements["totalRevenue"].value = sum;
     earningsUSD = (weeklyEarnings / 100).toFixed(2);
+    document.forms["salesOutput"].elements["totalRevenue"].value = (sum/100).toFixed(2);
     document.forms["salesOutput"].elements["weeklyEarnings"].value = `Please check to ensure you entered sales data for all items sold.\n\n${name}, your weekly earnings are $${earningsUSD}.`
   } else {
     calcRevenue(item1, item2, item3, item4);
     printRevenue(revenue1, revenue2, revenue3, revenue4);
     calcEarnings(revenue1, revenue2, revenue3, revenue4);
-    totalRevenue = totalRevenue / 100;
-    document.forms["salesOutput"].elements["totalRevenue"].value = sum;
     earningsUSD = (weeklyEarnings / 100).toFixed(2);
+    document.forms["salesOutput"].elements["totalRevenue"].value = (sum / 100).toFixed(2);
     document.forms["salesOutput"].elements["weeklyEarnings"].value = `${name}, your weekly earnings are $${earningsUSD}.`
   }
 
@@ -75,10 +70,10 @@ function calcRevenue(item1, item2, item3, item4) {
 }
 
 function printRevenue(revenue1, revenue2, revenue3, revenue4) {
-  document.forms["salesOutput"].elements["revenue1"].value = revenue1 / 100;
-  document.forms["salesOutput"].elements["revenue2"].value = revenue2 / 100;
-  document.forms["salesOutput"].elements["revenue3"].value = revenue3 / 100;
-  document.forms["salesOutput"].elements["revenue4"].value = revenue4 / 100;
+  document.forms["salesOutput"].elements["revenue1"].value = (revenue1 / 100).toFixed(2);
+  document.forms["salesOutput"].elements["revenue2"].value = (revenue2 / 100).toFixed(2);
+  document.forms["salesOutput"].elements["revenue3"].value = (revenue3 / 100).toFixed(2);
+  document.forms["salesOutput"].elements["revenue4"].value = (revenue4 / 100).toFixed(2);
 }
 
 function calcEarnings(revenue1, revenue2, revenue3, revenue4) {
