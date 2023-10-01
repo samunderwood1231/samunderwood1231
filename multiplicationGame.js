@@ -7,6 +7,7 @@ function load() {
     document.forms["answerInput"].elements["answer"].value = " ";
     document.forms["answerInput"].addEventListener("submit", function(event) {
         event.preventDefault();
+        return false;
     });
     try {
         document.body.removeChild(newButton);
