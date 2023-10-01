@@ -1,5 +1,4 @@
 function load() {
-    document.forms["answerInput"].elements["isCorrect"].value = " ";
     document.getElementById("factors").reset();
     let factor1 = (Math.random()).toFixed(1) * 10;
     let factor2 = (Math.random()).toFixed(1) * 10;
