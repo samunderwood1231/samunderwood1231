@@ -5,9 +5,6 @@ function reset() {
     document.forms["factors"].elements["factor1"].value = factor1;
     document.forms["factors"].elements["factor2"].value = factor2;
     document.forms["answerInput"].elements["answer"].value = " ";
-    try {
-        document.body.removeChild(newButton);
-    } catch (error) { }
 }
 
 function load() {
@@ -36,7 +33,10 @@ function score() {
             newButton.textContent = 'Generate another problem!';
             newButton.id = "newButton";
             document.body.appendChild(newButton);
-            document.getElementById('newButton').onclick = function () { reset(); };
+            document.getElementById('newButton').onclick = function () { 
+                document.body.removeChild(newButton); 
+                reset();
+            };
         } else {
             isCorrect.textContent = "Incorrect, please try again!"
         }
