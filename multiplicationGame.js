@@ -10,7 +10,7 @@ function load() {
     } catch (error) { }
 }
 
-window.addEventListener("load", load());
+window.addEventListener("load", load);
 
 document.getElementById('submit').onclick = function () { score(); };
 function score() {
