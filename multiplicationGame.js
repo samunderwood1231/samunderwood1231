@@ -5,6 +5,9 @@ function load() {
     document.forms["factors"].elements["factor1"].value = factor1;
     document.forms["factors"].elements["factor2"].value = factor2;
     document.forms["answerInput"].elements["answer"].value = " ";
+    document.forms["answerInput"].addEventListener("submit", function(event) {
+        event.preventDefault();
+    });
     try {
         document.body.removeChild(newButton);
     } catch (error) { }
