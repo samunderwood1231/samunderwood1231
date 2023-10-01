@@ -15,24 +15,24 @@ window.addEventListener("load", load());
 
 document.getElementById('submit').onclick = function () { score(); };
 function score() {
-
+    let isCorrect = document.getElementById("isCorrect");
     factor1 = parseInt(document.forms["factors"].elements["factor1"].value);
     factor2 = parseInt(document.forms["factors"].elements["factor2"].value);
     
     let userAnswer = parseInt(document.forms["answerInput"].elements["answer"].value);
     if (isNaN(userAnswer)) {
-        document.forms["answerInput"].elements["isCorrect"].value = "Enter a number!";
+       isCorrect.textContent = "Enter a number!";
     } else {
         rightAnswer = factor1 * factor2;
         if (userAnswer == rightAnswer) {
-            document.forms["answerInput"].elements["isCorrect"].value = "Very good!";
+            isCorrect.textContent = "Very good!";
             const newButton = document.createElement('button');
             newButton.textContent = 'Generate another problem!';
             newButton.id = "newButton";
             document.body.appendChild(newButton);
             document.getElementById('newButton').onclick = function () { load(); };
         } else {
-            document.forms["answerInput"].elements["isCorrect"].value = "Incorrect, please try again!"
+            isCorrect.textContent = "Incorrect, please try again!"
         }
     }
 }
