@@ -1,4 +1,5 @@
 function reset() {
+    document.getElementById("newButton").style.display = "none";
     document.getElementById("factors").reset();
     let factor1 = (Math.random()).toFixed(1) * 10;
     let factor2 = (Math.random()).toFixed(1) * 10;
@@ -13,6 +14,9 @@ function load() {
         event.preventDefault();
         score();
     });
+    document.getElementById('newButton').onclick = function () { 
+        reset();
+    };
 }
 
 window.addEventListener("load", load);
@@ -29,14 +33,7 @@ function score() {
         rightAnswer = factor1 * factor2;
         if (userAnswer == rightAnswer) {
             isCorrect.textContent = "Very good!";
-            const newButton = document.createElement('button');
-            newButton.textContent = 'Generate another problem!';
-            newButton.id = "newButton";
-            document.body.appendChild(newButton);
-            document.getElementById('newButton').onclick = function () { 
-                document.body.removeChild(newButton); 
-                reset();
-            };
+        document.getElementById("newButton").style.display = "";
         } else {
             isCorrect.textContent = "Incorrect, please try again!"
         }
