@@ -22,7 +22,7 @@ function addTable() {
     for (let i = 0; i < 3; i++) {
         let interest = i + 5;
 
-        const test = document.createTextNode(`Table: Principal growth with ${i + 5}% APY`);
+        const test = document.createTextNode(`Table: Growth on $1000 Principal Investment with ${i + 5}% APY`);
         document.body.appendChild(test);
         const table = document.createElement('table');
         //table headers
@@ -37,7 +37,7 @@ function addTable() {
         table.appendChild(header3);
 
         // inner loop populates each table row (each row corresponds to a year)
-        for (let year = 0; year < 6; year++) {
+        for (let year = 1; year < 6; year++) {
             const tr = document.createElement('tr');
 
             const principalCol = document.createElement('td');
