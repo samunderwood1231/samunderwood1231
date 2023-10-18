@@ -2,8 +2,8 @@
 
 function getInput() {
     let size = document.forms['input'].elements['squareSize'].value;
-    if (size <= 0 || size > 5) {
-        document.forms['input'].elements['squareSize'].value = "Please enter an integer between 1 and 5";
+    if (size < 2 || size > 10) {
+        document.forms['input'].elements['squareSize'].value = "Please enter an integer between 2 and 10";
     } else return size;
 }
 
