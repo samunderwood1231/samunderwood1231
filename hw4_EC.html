@@ -19,6 +19,11 @@
             height: 20px;
             overflow: hidden;
         }
+
+        .errorDiv {
+            display: none;
+        }
+
     </style>
 
     <title>Hollow Square</title>
@@ -26,9 +31,18 @@
 
 <body>
 
-    <label for = "squareSize"> Enter an integer between 2 and 10:</label>
 
-    <div id = "button">
+    <a href="hw4_part1.html">Part 1</a><br>
+    <a href="hw4_part2.html">Part 2</a><br>
+    <a href="hw4.html">Homework 4 Main Page</a><br>
+    <a href="hw1.html">Back to Index</a>
+    <p>
+
+<h2>Hollow Square Drawing Demo</h2>
+
+    <label for="squareSize"> Enter an integer between 2 and 10:</label>
+
+    <div id="button">
 
         <form id="input" target="#">
             <input type="text" id="squareSize" size="35" autocomplete="off" autofocus>
@@ -40,6 +54,9 @@
 
     </div>
 
+    <div class="errorDiv" id = "error">
+        Input error: Please enter an integer between 2 and 10.
+    </div>
 
 
 
