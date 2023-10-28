@@ -1,32 +1,29 @@
-function reset() {
-    document.getElementById("newButton").style.display = "none";
-    document.getElementById("factors").reset();
-    let factor1 = (Math.random()).toFixed(1) * 10;
-    let factor2 = (Math.random()).toFixed(1) * 10;
-    document.forms["factors"].elements["factor1"].value = factor1;
-    document.forms["factors"].elements["factor2"].value = factor2;
-    document.forms["answerInput"].elements["answer"].value = " ";
+function validate() {
+   // check name
+
+   // check browser
+
+   // check age
+
+   // check genre
 }
 
 function load() {
     reset();
-        document.forms["answerInput"].addEventListener("submit", function(event) {
+        document.forms['submit'].addEventListener('submit', function(event) {
         event.preventDefault();
-        score();
+        validate();
     });
-    document.getElementById('newButton').onclick = function () { 
-        reset();
-    };
 }
 
-window.addEventListener("load", load);
+window.addEventListener('load', load);
 
 function score() {
-    let isCorrect = document.getElementById("isCorrect");
-    factor1 = parseInt(document.forms["factors"].elements["factor1"].value);
-    factor2 = parseInt(document.forms["factors"].elements["factor2"].value);
+    let isCorrect = document.getElementById('isCorrect');
+    factor1 = parseInt(document.forms['factors'].elements['factor1'].value);
+    factor2 = parseInt(document.forms['factors'].elements['factor2'].value);
     
-    let userAnswer = parseInt(document.forms["answerInput"].elements["answer"].value);
+    let userAnswer = parseInt(document.forms['answerInput'].elements['answer'].value);
     if (isNaN(userAnswer)) {
        isCorrect.textContent = "Enter a number!";
     } else {

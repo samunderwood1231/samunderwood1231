@@ -15,9 +15,23 @@
             text-align: left
         }
 
-        .div-1 {
+        .div-name,
+        .div-1,
+        .div-genre,
+        .div-age,
+        .div-browser {
             font-weight: bold;
             color: red;
+        }
+
+        .div-error {
+            font-weight: bold;
+            color: red;
+        }
+
+        .div-submitted {
+            font-weight: bold;
+            color: green;
         }
 
         input:invalid {
@@ -32,40 +46,48 @@
         <h1> Homework 5, Part 1</h1>
         <h2>Movie Preference Form</h2>
         <!-- Name field -->
-        <form id=name>
+        <form id=movies>
             <fieldset>
                 <legend>Enter your full name</legend>
                 <div>
-                    <input type="text" id="name" name="name" required minlength="1" size="20" />
+                    <input type="text" id="name" required minlength="1" size="20">
+                </div>
+                <div class=div-name>
+                    Please enter your name.
+                </div>
             </fieldset>
-        </form>
-        <!-- Browser field -->
-        <form id=browsers>
+
+            <!-- Browser field -->
+
             <fieldset>
                 <legend>Select which browsers you use</legend>
                 <div>
-                    <input type="checkbox" id="chrome" name="browser" value="chrome" />
+                    <input type="checkbox" id="chrome" name="browser" value="chrome">
                     <label for="chrome">Chrome</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="firefox" name="browser" value="firefox" />
+                    <input type="checkbox" id="firefox" name="browser" value="firefox">
                     <label for="firefox">Firefox</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="ie" name="browser" value="ie" />
+                    <input type="checkbox" id="ie" name="browser" value="ie">
                     <label for="ie">Internet Explorer</label>
                 </div>
-                <input type="checkbox" id="other" name="browser" value="other" />
+                <div>
+                <input type="checkbox" id="other" name="browser" value="other">
                 <label for="other">Other</label>
                 </div>
+                <div class=div-browser>
+                    Please select which browsers you use.
+                </div>
             </fieldset>
-        </form>
-        <!-- Age field -->
-        <form id=age>
+
+            <!-- Age field -->
+
             <fieldset>
                 <legend>Select your age range</legend>
                 <div>
-                    <input type="radio" id="ageYoung" name="age" value="ageYoung" />
+                    <input type="radio" id="ageYoung" name="age" value="ageYoung">
                     <label for="ageYoung">Age 21 or younger</label>
                 </div>
                 <div>
@@ -74,10 +96,13 @@
                 </div>
                 <input type="radio" id="ageOld" name="age"><label for="ageOld" value="ageOld">Age 51 or older</label>
                 </div>
-        </form>
-        </fieldset>
-        <!-- Genre field -->
-        <form id=genre>
+                <div class=div-age>
+                    Please select your age range.
+                </div>
+            </fieldset>
+
+            <!-- Genre field -->
+
             <fieldset>
                 <legend>Select your favorite movie genre</legend>
                 <select name="genre" id="genreSelect">
@@ -92,14 +117,23 @@
                     <option value="family">Family</option>
                     <option value="other">Other</option>
                 </select>
+                <div class=div-genre>
+                    Please select your favorite genre.
+                </div>
             </fieldset>
-            <input type="button" id="submit" value="Submit">
-            <input type="reset" value="Reset form">
-        </form>
-        <br>
-        <div class="div-1">
-            Error message goes here.
-        </div>
+
+            <form id="submit">
+                <input type="button" id="submit" value="Submit">
+                <input type="reset" value="Reset form">
+
+                <br>
+                <div class="div-error">
+                    Form not submitted; check input errors above.
+                </div>
+                <div class="div-submitted">
+                    Thanks, your information was submitted!
+                </div>
+            </form>
     </section>
 
     <section>
