@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="javascript and html exercises for san mateo college course cs 114">
+
+    <script src="">
+    </script>
+
+    <style>
+        body,
+        h2 {
+            background-color: lightgray;
+            font-size: large;
+            text-align: left
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid;
+            border-collapse: collapse;
+            padding: 3px;
+        }
+
+        tr:nth-child(odd) {
+            background-color: lightslategray;
+
+        }
+
+        tr:nth-child(even) {
+            background-color: lightsalmon;
+
+        }
+    </style>
+
+    <title>Homework 5, Part 1</title>
+</head>
+
+<body>
+
+    <section>
+
+        <h1>Movie Preference Form</h1>
+        <form id="userInfo" name="user">
+            <table>
+                <tr>
+                    <td><label for="userFullName">Full Name</label>
+                    </td>
+                    <td><input type="text" id="userFullName" size=40 autofocus></td>
+                </tr>
+                <tr>
+                    <td>Age range</td>
+                    <td>
+                        <input type="radio" id="ageYoung_radio" name="age"><label for="ageYoung_radio">Age 21 or younger</label>
+                        <input type="radio" id="ageMid_radio" name="age" checked><label for="ageMid_radio">Age 22 to 50</label>
+                        <input type="radio" id="ageOld_radio" name="age"><label for="ageOld_radio">Age 51 or older</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Favorite Movie Genre</td>
+                    <td>Drop down here</td>
+                </tr>
+            </table>
+            <td><input type="button" id="submit" value="Submit">
+            <input type="reset" value="Reset form">
+            </td>
+        </form>
+
+
+
+
+    </section>
+
+
+
+    <section>
+        <br>
+        <a href="hw5_part2.html">Part 2</a><br>
+        <a href="hw5_part3.html">Part 3</a><br>
+        <a href="hw5.html">Homework 5 Main Page</a><br>
+        <a href="hw1.html">Back to Index</a>
+    </section>
+
+</body>
+
+</html>
