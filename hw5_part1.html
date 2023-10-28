@@ -63,8 +63,21 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Favorite Movie Genre</td>
-                    <td>Drop down here</td>
+                    <td><label for="genreSelect">Favorite Movie Genre</label></td>
+                    <td>
+                        <select name="genre" id="genreSelect">
+                          <option value="">--Please choose an option--</option>
+                          <option value="action">Action</option>
+                          <option value="sciFi">Sci-fi</option>
+                          <option value="comedy">Comedy</option>
+                          <option value="romance">Romance</option>
+                          <option value="drama">Drama</option>
+                          <option value="thriller">Thriller</option>
+                          <option value="horror">Horror</option>
+                          <option value="family">Family</option>
+                          <option value="other">Other</option>
+                        </select>
+                    </td>
                 </tr>
             </table>
             <td><input type="button" id="submit" value="Submit">
