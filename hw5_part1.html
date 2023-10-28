@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="description" content="javascript and html exercises for san mateo college course cs 114">
 
-    <script src="">
+    <script src="hw5_part1_script.js">
     </script>
 
     <style>
@@ -13,79 +13,107 @@
         h2 {
             background-color: lightgray;
             font-size: large;
+            font-family: 'Fira Sans', sans-serif;
             text-align: left
         }
 
-        .center {
-            text-align: center;
+        .div-1 {
+            font-weight: bold;
+            color: red;
         }
 
-        table,
-        th,
-        td {
-            border: 1px solid;
-            border-collapse: collapse;
-            padding: 3px;
-        }
-
-        tr:nth-child(odd) {
-            background-color: lightslategray;
-
-        }
-
-        tr:nth-child(even) {
-            background-color: lightsalmon;
-
+        input:invalid {
+            border: 2px solid red;
         }
     </style>
 
-    <title>Homework 5, Part 1</title>
+    <title>Movie Preference Form</title>
 </head>
 
 <body>
 
     <section>
 
-        <h1>Movie Preference Form</h1>
-        <form id="userInfo" name="user">
-            <table>
-                <tr>
-                    <td><label for="userFullName">Full Name</label>
-                    </td>
-                    <td><input type="text" id="userFullName" size=40 autofocus></td>
-                </tr>
-                <tr>
-                    <td>Age range</td>
-                    <td>
-                        <input type="radio" id="ageYoung_radio" name="age"><label for="ageYoung_radio">Age 21 or younger</label>
-                        <input type="radio" id="ageMid_radio" name="age" checked><label for="ageMid_radio">Age 22 to 50</label>
-                        <input type="radio" id="ageOld_radio" name="age"><label for="ageOld_radio">Age 51 or older</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="genreSelect">Favorite Movie Genre</label></td>
-                    <td>
-                        <select name="genre" id="genreSelect">
-                          <option value="">--Please choose an option--</option>
-                          <option value="action">Action</option>
-                          <option value="sciFi">Sci-fi</option>
-                          <option value="comedy">Comedy</option>
-                          <option value="romance">Romance</option>
-                          <option value="drama">Drama</option>
-                          <option value="thriller">Thriller</option>
-                          <option value="horror">Horror</option>
-                          <option value="family">Family</option>
-                          <option value="other">Other</option>
-                        </select>
-                    </td>
-                </tr>
-            </table>
-            <td><input type="button" id="submit" value="Submit">
+        <h1> Homework 5, Part 1</h1>
+        <h2>Movie Preference Form</h2>
+
+        <!-- Name field -->
+        <form id=name>
+            <fieldset>
+                <legend>Enter your full name</legend>
+                <div>
+                    <input type="text" id="name" name="name" required minlength="1" size="20" />
+            </fieldset>
+        </form>
+
+        <!-- Browser field -->
+        <form id=browsers>
+            <fieldset>
+                <legend>Select which browsers you use</legend>
+                <div>
+                    <input type="checkbox" id="chrome" name="browser" value="chrome" />
+                    <label for="chrome">Chrome</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="firefox" name="browser" value="firefox" />
+                    <label for="firefox">Firefox</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="ie" name="browser" value="ie" />
+                    <label for="ie">Internet Explorer</label>
+                </div>
+                <input type="checkbox" id="other" name="browser" value="other" />
+                <label for="other">Other</label>
+                </div>
+            </fieldset>
+        </form>
+
+        <!-- Age field -->
+        <form id=age>
+            <fieldset>
+                <legend>Select your age range</legend>
+                <div>
+                    <input type="radio" id="ageYoung" name="age" value="ageYoung" />
+                    <label for="ageYoung">Age 21 or younger</label>
+                </div>
+                <div>
+                    <input type="radio" id="ageMid" name="age" value="ageMid"><label for="ageMid">Age 22 to
+                        50</label>
+                </div>
+                <input type="radio" id="ageOld" name="age"><label for="ageOld" value="ageOld">Age 51 or older</label>
+                </div>
+        </form>
+        </fieldset>
+
+        <form id=genre>
+            <fieldset>
+                <legend>Select your favorite movie genre</legend>
+                <select name="genre" id="genreSelect">
+                    <option value="">--Please choose an option--</option>
+                    <option value="action">Action</option>
+                    <option value="sciFi">Sci-fi</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="romance">Romance</option>
+                    <option value="drama">Drama</option>
+                    <option value="thriller">Thriller</option>
+                    <option value="horror">Horror</option>
+                    <option value="family">Family</option>
+                    <option value="other">Other</option>
+                </select>
+
+            </fieldset>
+
+            <input type="button" id="submit" value="Submit">
             <input type="reset" value="Reset form">
-            </td>
+
         </form>
 
 
+
+        <br>
+        <div class="div-1">
+            Error message goes here.
+        </div>
 
 
     </section>
