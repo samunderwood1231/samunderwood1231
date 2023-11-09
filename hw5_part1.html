@@ -12,26 +12,22 @@
             background-color: lightgray;
             font-size: large;
             font-family: 'Fira Sans', sans-serif;
-            text-align: left
-        }
-
-        .div-name,
-        .div-1,
-        .div-genre,
-        .div-age,
-        .div-browser {
-            font-weight: bold;
-            color: red;
         }
 
         .div-error {
-            font-weight: bold;
             color: red;
+            font-weight: bold;
+            display: none;
         }
 
-        .div-submitted {
-            font-weight: bold;
-            color: green;
+        fieldset {
+            width: 500px;
+        }
+
+        legend {
+            background-color: darkgray;
+            padding: 4px 6px;
+            border: 4px;
         }
 
         input:invalid {
@@ -45,24 +41,25 @@
     <section>
         <h1> Homework 5, Part 1</h1>
         <h2>Movie Preference Form</h2>
+
         <!-- Name field -->
-        <form id=movies>
+        <form id=movieForm>
             <fieldset>
-                <legend>Enter your full name</legend>
+                <legend><label for="name">Enter your full name</label></legend>
                 <div>
-                    <input type="text" id="name" required minlength="1" size="20">
+                    <input type="text" id="name" required minlength="2" size="20" autofocus value="Sam">
                 </div>
-                <div class=div-name>
+                <div id="div-name" class="div-error">
                     Please enter your name.
                 </div>
             </fieldset>
 
             <!-- Browser field -->
-
-            <fieldset>
+    
+            <fieldset style="30%">
                 <legend>Select which browsers you use</legend>
                 <div>
-                    <input type="checkbox" id="chrome" name="browser" value="chrome">
+                    <input type="checkbox" id="chrome" name="browser" value="chrome" checked>
                     <label for="chrome">Chrome</label>
                 </div>
                 <div>
@@ -77,66 +74,68 @@
                     <input type="checkbox" id="other" name="browser" value="other">
                     <label for="other">Other</label>
                 </div>
-                <div class=div-browser>
+                <div id="div-browser" class="div-error">
                     Please select which browsers you use.
                 </div>
             </fieldset>
+
 
             <!-- Age field -->
 
             <fieldset>
                 <legend>Select your age range</legend>
                 <div>
-                    <input type="radio" id="ageYoung" name="age" value="ageYoung">
+                    <input type="radio" id="ageYoung" name="age" value="ageYoung" autocomplete>
                     <label for="ageYoung">Age 21 or younger</label>
                 </div>
                 <div>
-                    <input type="radio" id="ageMid" name="age" value="ageMid"><label for="ageMid">Age 22 to
+                    <input type="radio" id="ageMid" name="age" value="ageMid" autocomplete><label for="ageMid">Age 22 to
                         50</label>
                 </div>
-                <input type="radio" id="ageOld" name="age" value="ageOld"><label for="ageOld">Age 51 or older</label>
-                <div class=div-age>
+                <input type="radio" id="ageOld" name="age" value="ageOld" autocomplete><label for="ageOld">Age 51 or older</label>
+                <div id="div-age" class="div-error">
                     Please select your age range.
                 </div>
             </fieldset>
-
+    
             <!-- Genre field -->
 
+
             <fieldset>
-                <legend>Select your favorite movie genre</legend>
-                <select name="genre" id="genreSelect">
+                <legend><label for="genreSelect">Select your favorite movie genre</label></legend>
+                <select name="genre" id="genreSelect" required>
                     <option value="">--Please choose an option--</option>
                     <option value="action">Action</option>
-                    <option value="sciFi">Sci-fi</option>
                     <option value="comedy">Comedy</option>
-                    <option value="romance">Romance</option>
                     <option value="drama">Drama</option>
-                    <option value="thriller">Thriller</option>
-                    <option value="horror">Horror</option>
                     <option value="family">Family</option>
+                    <option value="horror">Horror</option>
+                    <option value="romance">Romance</option>
+                    <option value="sciFi">Sci-fi</option>
+                    <option value="thriller">Thriller</option>
                     <option value="other">Other</option>
+                    
                 </select>
-                <div class=div-genre>
+                <div id="div-genre" class="div-error">
                     Please select your favorite genre.
                 </div>
             </fieldset>
 
-            <input type="button" id="submit" value="Submit">
-            <input type="reset" value="Reset form">
 
+
+            <input type="submit" id="submit" value="Submit">
+            <input type="reset" value="Reset form">
+            
             <br>
-            <div class="div-error">
-                Form not submitted; check input errors above.
-            </div>
-            <div class="div-submitted">
-                Thanks, your information was submitted!
-            </div>
+            <p id="submitMessage">
+
         </form>
+
+        </p>
     </section>
 
     <section>
         <h3>Homework Navigation Links</h3>
-        <br>
         <a href="hw5_part2.html">Part 2</a><br>
         <a href="hw5_part3.html">Part 3</a><br>
         <a href="hw5.html">Homework 5 Main Page</a><br>

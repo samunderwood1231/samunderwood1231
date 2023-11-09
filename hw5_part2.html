@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="description" content="javascript and html exercises for san mateo college course cs 114">
 
-    <script src="" >
+    <script src="hw5_part2_script.js" >
     </script>
 
     <style>
@@ -28,16 +28,6 @@
             padding: 3px;
         }
 
-        tr:nth-child(odd) {
-            background-color: lightslategray;
-
-        }
-
-        tr:nth-child(even) {
-            background-color: lightsalmon;
-
-        }
-
     </style>
 
     <title>Homework 5, Part 2</title>
@@ -45,7 +35,30 @@
 
 <body>
    
+    <section>
+        <div>
+        <label for="select1">Select a website and click "Go"</label>
 
+            <select name="select1" id="siteBtnSelect">
+            <option value="http://www.google.com/">Goolge</option>
+            <option value="https://developer.mozilla.org/en-US/">MDN</option>
+            <option value="http://www.wikipedia.org/">Wikipedia</option>
+            </select>
+            <input type="button" id="button1" value="Go">
+</div>
+<br>
+<div>
+            <label for="select2">Select a website</label>
+            <select name="select2" id="onclickSelect">
+            <option value="">--Choose an Option--</option>   
+            <option value="http://www.google.com/">Google</option>
+            <option value="https://developer.mozilla.org/en-US/">MDN</option>
+            <option value="http://www.wikipedia.org/">Wikipedia</option>
+            </select>
+</div>
+
+    </section>
+<br>
     <section>
         <a href="hw5_part1.html">Part 1</a><br>
         <a href="hw5_part3.html">Part 3</a><br>
