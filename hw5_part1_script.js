@@ -1,12 +1,25 @@
-// called when page loads
+// add event listener on the window
+window.addEventListener("load", onLoad);
+
+// register event listener on submit button & bind submits button to getValues()
 function onLoad() {
     document.forms['movieForm'].addEventListener('submit', function (event) {
         event.preventDefault();
         getValues();
-    })
+    });
+    
+        // sets reset button to also hide div element showing successful submission
+        let resetBtn = document.getElementById("reset-button");
+        resetBtn.addEventListener("click", function () {
+            document.getElementById("movieForm").reset();
+            displayDiv("div-submit", false);
+        });
+        
+    }
 
-}
 
+
+// shows and hides the associated div element
 function displayDiv(divID, isShown) {
     let div = document.getElementById(divID);
     if (isShown) {
@@ -16,10 +29,6 @@ function displayDiv(divID, isShown) {
     }
 }
 
-// add event listener on the window
-window.addEventListener("load", onLoad);
-
-
 // call validation methods
 function getValues() {
     validateName();
@@ -27,12 +36,15 @@ function getValues() {
     validateButtons();
     validateSelect();
 
+    /* if any of the validation methods return false (indicating an error), hide the div element 
+         that indicates a successful form submission */ 
     if (!validateName() || !validateBoxes() || !validateButtons() || !validateSelect) {
-        console.log('one of the fields was not filled out');
-        document.getElementById("div-submit").style.display = "none";
+        displayDiv("div-submit", false)
+        
         return;
-    } console.log('every field passed validation');
-    document.getElementById("div-submit").style.display = "block";
+    } 
+    // else display the successful form submission div element
+    displayDiv("div-submit", true);
     
 }
 
@@ -44,18 +56,18 @@ function validateName() {
     validityState = name.validity;
     if (validityState.valueMissing) {
         name.setCustomValidity("Please enter your name");
-        document.getElementById("div-name").style.display = "block";
+        displayDiv("div-name", false);
 
         return false;
     } else if (validityState.typeMismatch) {
         name.setCustomValidity("Please enter your name");
-        document.getElementById("div-name").style.display = "block";
+        displayDiv("div-name", true);
 
         return false;
     } else {
         name.setCustomValidity("");
         name.reportValidity();
-        document.getElementById("div-name").style.display = "none";
+        displayDiv("div-name", false);
         
 
         return name;
@@ -67,17 +79,16 @@ function validateName() {
 // if no error, returns the input value array (values of the checked boxes)
 function validateBoxes() {
     let checkboxes = document.querySelectorAll('input[name="browser"]:checked');
-    const divID = document.getElementById("div-browser");
     let values = [];
     checkboxes.forEach((checkbox) => {
         values.push(checkbox.value);
     });
     if (values.length === 0) {
-        divID.style.display = "block";
+        displayDiv("div-browser", true);
 
         return false;
     } else {
-        divID.style.display = "none";
+        displayDiv("div-browser", false);
 
         return values;
     }
@@ -89,17 +100,15 @@ function validateBoxes() {
 function validateButtons() {
     const radioButtons = document.querySelectorAll('input[name="age"]');
     let age;
-    const divID = document.getElementById("div-age");
-    divID.style.display = "none";
     for (const radioButton of radioButtons) {
         if (radioButton.checked) {
             age = radioButton.value;
-            divID.style.display = "none";
+            displayDiv("div-age", false);
 
             return age;
         }
     }
-    divID.style.display = "block";
+    displayDiv("div-age", true);
 
     return false;
 }
@@ -121,6 +130,3 @@ function validateSelect() {
         };
     }
 }
-
-
-
