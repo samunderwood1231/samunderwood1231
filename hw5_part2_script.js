@@ -1,3 +1,4 @@
+// when page loads, register the event listener on the GO button
 window.addEventListener("load", function () {
     let button = document.getElementById("button1");
     button.addEventListener("click", function () {
@@ -5,6 +6,7 @@ window.addEventListener("load", function () {
         console.log('button pressed');
     });
 
+    // also register the event listener on the select menu with no GO button
     let select2 = document.getElementById("onclickSelect");
     select2.addEventListener("click", function () {
         launchSite();
@@ -12,6 +14,7 @@ window.addEventListener("load", function () {
     })
 })
 
+// check which site is selected, open it in a new tab
 function validateSelect() {
     let sites = document.getElementById('siteBtnSelect');
 
@@ -24,6 +27,7 @@ function validateSelect() {
 
 }
 
+// check which site is selected, open it in a new tab
 function launchSite() {
     let sites = document.getElementById('onclickSelect');
 
