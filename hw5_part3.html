@@ -15,14 +15,6 @@
             text-align: left
         }
 
-        table,
-        th,
-        td {
-            border: 1px solid;
-            border-collapse: collapse;
-            padding: 3px;
-        }
-
         #div-state {
             font-weight: bold;
             white-space: pre;
@@ -33,36 +25,39 @@
             font-weight: bold;
             color: red;
         }
-
     </style>
 
     <title>Census Data Lookup</title>
+    
 </head>
 
 <body>
-   
-    <form id="stateInput">
-    <fieldset>
-        <legend>
-        <label for="stateName">State Name</label>
-        </legend>
-        Enter the abbreviation or state name to fetch census data about AL, AZ, AR, CA, or CO
-        <br>
-        <input type="text" id="stateName" required minlength="2" size="20" autofocus>
-        <button id = "button">Submit</button>        <button type="reset">Reset</button>
-    </fieldset>
-    </form>
 
-    <div id="div-state"></div>
-    <div id="div-error"></div>
+    <section>
+        <h1> Homework 5, Part 3</h1>
+        <h2>Census Data Lookup</h2>
+    </section>
 
+    <!-- Form for user to input state -->
+    <section>
+        <form id="stateInput">
+            <fieldset>
+                <legend>
+                    <label for="stateName">State Census Data Lookup</label>
+                </legend>
+                Enter the abbreviation or state name to fetch census data about AL, AZ, AR, CA, or CO
+                <br>
+                <input type="text" id="stateName" required minlength="2" size="20" autofocus>
+                <button id="button">Submit</button> <button type="reset">Reset</button>
+            </fieldset>
+        </form>
 
+        <!-- Div elements that display state data or error message -->
+        <div id="div-state"></div>
+        <div id="div-error"></div>
 
-</table>
-
-
-    </div>
-
+    </section>
+    <!-- HW navigation links -->
     <section>
         <a href="hw5_part1.html">Part 1</a><br>
         <a href="hw5_part2.html">Part 2</a><br>
