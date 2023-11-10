@@ -29,10 +29,11 @@ function launchSite() {
 
     sites.onchange = function () {
         for (const site of sites) {
-            if (site.selected && site.selected.value !== "") {
+            if (site.selected && site.value !== "") {
                 window.open(site.value, '_blank');
                 return;
             }
         }
     };
 }
+

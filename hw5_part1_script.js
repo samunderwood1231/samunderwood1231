@@ -1,26 +1,39 @@
+// called when page loads
+function onLoad() {
+    document.forms['movieForm'].addEventListener('submit', function (event) {
+        event.preventDefault();
+        getValues();
+    })
+
+}
+
+function displayDiv(divID, isShown) {
+    let div = document.getElementById(divID);
+    if (isShown) {
+        div.style.display = "block";
+    } else if (!isShown) {
+        div.style.display = "none";
+    }
+}
+
+// add event listener on the window
+window.addEventListener("load", onLoad);
+
+
 // call validation methods
 function getValues() {
-    // add logic here to get the return values from each function as variables to pass to user constructor
     validateName();
     validateBoxes();
     validateButtons();
     validateSelect();
 
-    if (validateBoxes() && validateButtons && validateName && validateSelect) {
-        console.log('all fields pass validation');
-
-    }
-}
-
-
-// constructor for the user object
-class user {
-    constructor(name, age, browser, genre) {
-        this.name = name;
-        this.age = age;
-        this.browser = browser;
-        this.genre = genre;
-    }
+    if (!validateName() || !validateBoxes() || !validateButtons() || !validateSelect) {
+        console.log('one of the fields was not filled out');
+        document.getElementById("div-submit").style.display = "none";
+        return;
+    } console.log('every field passed validation');
+    document.getElementById("div-submit").style.display = "block";
+    
 }
 
 // server side input validation for text field
@@ -43,6 +56,7 @@ function validateName() {
         name.setCustomValidity("");
         name.reportValidity();
         document.getElementById("div-name").style.display = "none";
+        
 
         return name;
     }
@@ -53,16 +67,17 @@ function validateName() {
 // if no error, returns the input value array (values of the checked boxes)
 function validateBoxes() {
     let checkboxes = document.querySelectorAll('input[name="browser"]:checked');
+    const divID = document.getElementById("div-browser");
     let values = [];
     checkboxes.forEach((checkbox) => {
         values.push(checkbox.value);
     });
     if (values.length === 0) {
-        divID = document.getElementById("div-browser");
         divID.style.display = "block";
 
         return false;
     } else {
+        divID.style.display = "none";
 
         return values;
     }
@@ -74,20 +89,19 @@ function validateBoxes() {
 function validateButtons() {
     const radioButtons = document.querySelectorAll('input[name="age"]');
     let age;
-    divID = document.getElementById("div-age");
+    const divID = document.getElementById("div-age");
     divID.style.display = "none";
     for (const radioButton of radioButtons) {
-        if (!radioButton.checked) {
-            divID = document.getElementById("div-age");
-            divID.style.display = "block";
-            return false;
-        } else if (radioButton.checked) {
+        if (radioButton.checked) {
             age = radioButton.value;
-            divID = document.getElementById("div-age");
             divID.style.display = "none";
+
             return age;
         }
     }
+    divID.style.display = "block";
+
+    return false;
 }
 
 // input validation for selector menu
@@ -102,20 +116,11 @@ function validateSelect() {
 
             return genre;
         } else {
+
             return false;
         };
     }
 }
 
-// called when page loads
-function onLoad() {
-    document.forms['movieForm'].addEventListener('submit', function (event) {
-        event.preventDefault();
-        getValues();
-    })
-}
-
-// add event listener on the window
-window.addEventListener("load", onLoad);
 
 

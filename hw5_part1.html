@@ -20,6 +20,12 @@
             display: none;
         }
 
+        #div-submit {
+            font-weight: bold;
+            color: green;
+            display: none;
+        }
+
         fieldset {
             width: 500px;
         }
@@ -47,7 +53,7 @@
             <fieldset>
                 <legend><label for="name">Enter your full name</label></legend>
                 <div>
-                    <input type="text" id="name" required minlength="2" size="20" autofocus value="Sam">
+                    <input type="text" id="name" required minlength="2" size="20" autofocus>
                 </div>
                 <div id="div-name" class="div-error">
                     Please enter your name.
@@ -59,7 +65,7 @@
             <fieldset style="30%">
                 <legend>Select which browsers you use</legend>
                 <div>
-                    <input type="checkbox" id="chrome" name="browser" value="chrome" checked>
+                    <input type="checkbox" id="chrome" name="browser" value="chrome">
                     <label for="chrome">Chrome</label>
                 </div>
                 <div>
@@ -121,13 +127,14 @@
                 </div>
             </fieldset>
 
-
-
             <input type="submit" id="submit" value="Submit">
             <input type="reset" value="Reset form">
             
             <br>
-            <p id="submitMessage">
+            
+            <div id="div-submit">
+            Your form has been successfully submitted!
+            </div>
 
         </form>
 

@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta name="description" content="javascript and html exercises for san mateo college course cs 114">
 
-    <script src="" >
-    </script>
+    <script src="hw5_part3_script.js"></script>
 
     <style>
         body,
@@ -14,10 +13,6 @@
             background-color: lightgray;
             font-size: large;
             text-align: left
-        }
-
-        .center {
-            text-align: center;
         }
 
         table,
@@ -28,14 +23,15 @@
             padding: 3px;
         }
 
-        tr:nth-child(odd) {
-            background-color: lightslategray;
+        #div-state {
+            font-weight: bold;
+            white-space: pre;
 
         }
 
-        tr:nth-child(even) {
-            background-color: lightsalmon;
-
+        #div-error {
+            font-weight: bold;
+            color: red;
         }
 
     </style>
@@ -45,14 +41,27 @@
 
 <body>
    
+    <form id="stateInput">
     <fieldset>
         <legend>
         <label for="stateName">State Name</label>
         </legend>
-        <input id="stateName" size = 20 required autofocus>
-
-      
+        Enter the abbreviation or state name to fetch census data about AL, AZ, AR, CA, or CO
+        <br>
+        <input type="text" id="stateName" required minlength="2" size="20" autofocus>
+        <button id = "button">Submit</button>        <button type="reset">Reset</button>
     </fieldset>
+    </form>
+
+    <div id="div-state"></div>
+    <div id="div-error"></div>
+
+
+
+</table>
+
+
+    </div>
 
     <section>
         <a href="hw5_part1.html">Part 1</a><br>
