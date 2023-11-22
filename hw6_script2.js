@@ -52,7 +52,7 @@ function countChar(input, searchKey) {
     let charCounter = 0;
     for (let i = 0; i < input.length; i++) {
         const thisChar = input[i];
-        if (searchKey === thisChar) {
+        if (searchKey.toLowerCase() === thisChar.toLowerCase()) {
            charCounter++;
         }
     }
