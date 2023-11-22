@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="regex demo javascript and html exercises for san mateo college course cs 114">
+    <script src="hw6_script3.js">
+    </script>
+    <style>
+        body,
+        h2 {
+            background-color: lightgray;
+            font-size: large;
+            font-family: 'Fira Sans', sans-serif;
+        }
+
+        #div-error {
+            color: red;
+            font-weight: bold;
+        }
+
+        fieldset {
+            width: 500px;
+        }
+
+        legend {
+            background-color: darkgray;
+            padding: 4px 6px;
+            border: 4px;
+        }
+
+ 
+    </style>
+
+    <title>Regex Demo</title>
+    
+</head>
+
+<body>
+    <section>
+        <h1> Homework 6, Part 3</h1>
+        <h2>Regex Demo</Title></h2>
+
+        <form id="inputForm">
+        <fieldset> 
+        <label for="inputForm">Enter your Phone Number in format (999) 999-9999:</label>
+        <input type="tel" name="phoneNum" id="phoneNum" 
+            placeholder="(999) 999-9999" autofocus>
+        </fieldset>
+        <label for="areaCode">Area Code</label>
+        <input type="text" name="areaCode" id="areaCode" readonly> 
+        <br>
+        <label for="firstThree">First Three Digits</label>
+        <input type="text" name="firstThree" id="firstThree" readonly>
+        <br>
+        <label for="lastFour">Last Four Digits</label>
+        <input type="text" name="lastFour" id="lastFour" readonly>
+        <br>
+        <input type="submit"><input type="reset" id="reset-button">
+        </form>
+    
+        <div id="div-error">
+
+        </div>
+    </section>
+
+
+    <section>
+        <h3>Homework Navigation Links</h3>
+        <a href="hw6_part1.html">Part 1</a><br>
+        <a href="hw6_part2.html">Part 2</a><br>
+        <a href="hw6.html">Homework 6 Main Page</a><br>
+        <a href="hw1.html">Back to Index</a>
+    </section>
+
+</body>
+
+</html>
