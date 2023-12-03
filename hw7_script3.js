@@ -1,5 +1,5 @@
 //hw6_script3.js
-// goes with hw6_part3.html
+// goes with hw7_part3.html
 
 // add event listener on the window
 window.addEventListener("load", onLoad);
