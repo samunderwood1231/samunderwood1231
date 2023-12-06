@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="decimal parser javascript and html exercises for san mateo college course cs 114">
+    <meta name="description" content="dom demo javascript and html exercises for san mateo college course cs 114">
     <script src="hw7_script1.js">
     </script>
     <style>
@@ -14,10 +14,8 @@
             font-family: 'Fira Sans', sans-serif;
         }
 
-        div {
-            font-weight: bold;
-            color: green;
-            white-space: pre;
+        #output-div {
+            font-size: normal;
         }
 
         fieldset {
@@ -33,39 +31,88 @@
         input:invalid {
             border: 2px solid red;
         }
+
+        
     </style>
 
-    <title>Decimal Parser</title>
+    <title>DOM demo</title>
     
 </head>
 
 <body>
     <section>
-        <h1>Homework 6, Part 1</h1>
-        <h2>Decimal Parser</h2>
+        <h1>Homework 7, Part 1</h1>
+        <h2>Document Object Model Demo</h2>
 
         <!-- User input -->
         <fieldset>
-        <form id="inputForm">
-
-        <label for="input">Enter a number with at least four decimal places:</label><br>
-        <input type="text" name="decimal_input" id="input" autofocus autocomplete="off">
-        <input type="submit"> <input type="reset" id="reset-button">
-
-        <div id="div">
+            <legend>Select a background color:</legend>
+          
+            <div>
+              <input type="radio" id="blue" name="color" value="blue">
+              <label for="blue">Blue</label>
             </div>
+          
+            <div>
+              <input type="radio" id="red" name="color" value="red">
+              <label for="red">Red</label>
+            </div>
+          
+            <div>
+              <input type="radio" id="green" name="color" value="green">
+              <label for="green">Green</label>
+            </div>
+            <div>
+              <input type="radio" id="reset" name="color" value="reset">
+              <label for="reset">Reset</label>
+            </div>
+          </fieldset>
 
-        </form>
+          <fieldset>
+            <legend>Select a font style:</legend>
+          
+            <div>
+              <input type="checkbox" id="underline" name="font-style" value="underline">
+              <label for="underline">Underline</label>
+            </div>
+          
+            <div>
+              <input type="checkbox" id="bold" name="font-style" value="bold">
+              <label for="bold">Bold</label>
+            </div>
+          
+            <div>
+              <input type="checkbox" id="italic" name="font-style" value="italic">
+              <label for="italic">Italic</label>
+            </div>
+          </fieldset>
+
+          <fieldset><legend><label for="onclickSelect">Select a font size</label></legend>
+          <select name="select" id="onclickSelect">
+              <option value="">--Choose an Option--</option>
+              <option value="0.5em">Small</option>
+              <option value="1em">Medium</option>
+              <option value="2em">Large</option>
+          </select>
         </fieldset>
+
+
+        <!-- Output -->
+        <div id="output-div">
+            <br>
+          
+          The quick red fox jumps over the lazy brown dog.
+        
+        </div>
+
 
     </section>
 
     <!-- HW navigation links -->
     <section>
         <h4>Homework Navigation Links</h4>
-        <a href="hw6_part2.html">Part 2</a><br>
-        <a href="hw6_part3.html">Part 3</a><br>
-        <a href="hw6.html">Homework 6 Main Page</a><br>
+        <a href="hw7_part2.html">Part 2</a><br>
+        <a href="hw7.html">Homework 7 Main Page</a><br>
         <a href="hw1.html">Back to Index</a>
     </section>
 
