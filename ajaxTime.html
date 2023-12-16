@@ -28,6 +28,14 @@ function ajaxFunction(){
 		}
 	}
 }
+
+ajaxRequest.onreadystatechange = function(){
+    if(ajaxRequest.readyState == 4){
+		// Get the data from the server's response
+        document.myForm.time.value = ajaxRequest.responseText;
+	}
+}
+
 //-->
 </script>
 
@@ -39,3 +47,4 @@ Time: <input type='text' name='time' />
 </form>
 </body>
 </html>
+
