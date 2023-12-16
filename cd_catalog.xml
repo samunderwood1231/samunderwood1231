@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CATALOG>
   <CD>
+    <TITLE>Example CD</TITLE>
+    <ARTIST>Sam Underwood</ARTIST>
+    <COUNTRY>USA</COUNTRY>
+    <COMPANY>Example Records</COMPANY>
+    <PRICE>4.99</PRICE>
+    <YEAR>1990</YEAR>
+  </CD>
+  <CD>
     <TITLE>Hide your heart</TITLE>
     <ARTIST>Bonnie Tyler</ARTIST>
     <COUNTRY>UK</COUNTRY>
@@ -64,4 +72,6 @@
     <PRICE>8.20</PRICE>
     <YEAR>1987</YEAR>
   </CD>
+
+
 </CATALOG>
