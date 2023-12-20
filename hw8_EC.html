@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<style>
+
+</style>
+<link rel="stylesheet" href="prism.css">
+</head>
+<body>
+
+  <h2>Homework 8 Extra Credit - API Call Demo</h2>
+
+
+<form id="getIngredient">
+
+    <fieldset style="width:40%">
+       <legend><label for="userIngredient">Enter a Cocktail Ingredient</label></legend>
+  <input type="text" id="userIngredient">
+  <button type="button" onclick="ingredientLookup()">Fetch Ingredient from FreeCocktailDB</button>
+
+  <br>
+
+</fieldset>
+  </form>
+
+<div id="div-ingredients">
+
+</div>
+
+
+
+<script>
+
+
+function ingredientLookup() {
+const div = document.getElementById('div-ingredients');
+const ingredient = document.getElementById("userIngredient").value;
+
+if (ingredient!== "") {
+
+const getIngredientInfo = async (name) => {
+      const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${name}`);
+      const data = await response.json();
+      return data.ingredients[0].strDescription
+    }
+    
+    getIngredientInfo(ingredient)
+      .then(data => div.textContent = data);
+  } else {
+    div.textContent = 'Please enter an ingredient!';
+}
+}
+
+</script>
+
+
+
+
+<h3> Explanation of Script</h3>
+
+The demo above makes an API call to the FreeCocktailDB. I referenced code from <a href="https://publicapis.io/the-cocktail-db-api">Public APIs: Using TheCocktailDB API with JavaScript</a> as well as from <a href="https://medium.com/@SoraEagle/using-a-fetch-api-to-make-cocktails-21dd0ec2dc37">Using a Fetch API…To Make Cocktails (Medium article)</a>
+to assebmle the demo on this page. The user inputs an ingredient into the text input field. The submit button uses onclick() to call the function ingredientLookup(), which makes a fetch call to the FreeCocktailDB API. The result is returned from the API as an object. The getIngredientInfo() function returns the .strDescription property of the object.
+Finally, the string is printed in a div element.
+
+Some observations: if a user passes the empty string, the API returns the results for "gin". I was able to get around this by adding data validation before sending the API call. One thing I could not figure out how to do was validate the data that was returned from the server, for example, if the return value === null, print "The ingredient was not found". 
+That would be one improvement to make to this page.
+
+
+
+    <!-- HW navigation links -->
+  <section>
+      <h4>Homework Navigation Links</h4>
+      <a href="hw1.html">Back to Index</a><br>
+      <a href="ajaxassignment.html">Back to Homework 8 Part 1 (Ajax Assignment)</a>
+  </section>
+
+
+</body>
+
+
+
+</html>
