@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <head>
 <style>
 table,th,td {
   border : 1px solid black;
@@ -9,6 +10,8 @@ th,td {
   padding: 5px;
 }
 </style>
+<link rel="stylesheet" href="prism.css">
+</head>
 <body>
 
   <h2>Homework 8 - AJAX Application</h2>
@@ -17,6 +20,7 @@ th,td {
 <br><br>
 <table id="demo"></table>
 
+<script src="prism.js"></script>
 <script>
 function loadDoc() {
   const xhttp = new XMLHttpRequest();
@@ -40,6 +44,78 @@ function myFunction(xml) {
   document.getElementById("demo").innerHTML = table;
 }
 </script>
+
+
+<h3> Explanation of Ajax</h3>
+  <br>
+Ajax allows information to be sent from the server to parts of a webpage without requiring that page to reload, and is therefore
+a useful tool for creating responsive and modern webpages. Ajax uses a Javascript object called XMLHttpRequest. An XMLHTTPRequest object 
+has properties (fields) such as XMLHTTPRequest.readyState and methods such as XMLHttpRequest.send(). 
+<br>
+Consider the code that drives the "Get CD collection" button at the top of this page:
+
+<pre>
+  <code class="language-js">
+  function loadDoc() {
+    // call the XMLHTTPRequest constructor to make a new XMLHTTPRequest object assigned to the variable xhttp:
+    const xhttp = new XMLHttpRequest();
+    // note: this object may not work in old versions of Internet Explorer.
+
+    // When the request is loaded, execute the callback function myFunction with the XMLHTTPRequest object as its argument. 
+    xhttp.onload = function() {
+      myFunction(this);
+    }
+    
+    // initialize a request, using request method "GET" and the XML document named cd.catalog as the url. Then send the request.
+    xhttp.open("GET", "cd_catalog.xml");
+    xhttp.send();
+  }
+
+  function myFunction(xml) {
+    // code inside this function (not shown here) reads the XML document and creates the HTML table to display the content.
+    }
+    // this DOM object draws the table containing the HTML from the XML document.
+    document.getElementById("demo").innerHTML = table;
+  }
+  </code>
+</pre>
+
+So how does the code above work?
+
+First, we created an XMLHTTPRequest object by calling its constructor. The object has a property called onload, which we will use to handle the resposne.
+The function named myFunction, declared later, will execute when the request loads. 
+Finally, we set up the get and send requests. The .open method on the object specifies that we'll be getting data from the cd_catalog.xml file, stored in the same directory.
+
+Although not apparent in this example, the CD collection table is drawn <i>without</i> refreshing the entire page. This can be very powerful as we add more and more 
+content to the page. Furthermore, it saves bandwidth!
+
+
+</h3>
+
+<h2>FETCH API</h2>
+
+<a href="https://www.thecocktaildb.com/api.php">TheCocktailDB</a> is a free data source API for cocktails and drink mixing.
+It has a number of methods that could be very useful for drink menus
+or mixing apps, including: search cocktail by name, search ingredient by name, and filter by category. 
+Requests to this API will be returned as JSON document. The API developers recommend installing the Chrome extention JSONView to make reading JSON documents easier. 
+This API is free for developers and can be used commercially through Patreon subscription. The developer API key is "1". There are no limits on using the API for educational purposes. <br>
+The documentation is limited, but it seems like a fairly simple API to use. <a href="https://www.thecocktaildb.com/api.php">The API Methods can be found here.</a><br>
+<a href="https://publicapis.io/the-cocktail-db-api">Public APIs has some examples</a> of how to make calls to FreeCocktailDB. For example, the following Javascript snippet will search TheCocktailDB for an ingredient by name and return information about it:
+
+<pre>
+  <code class="language-js">
+    const getIngredientByName = async (name) => {
+      const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${name}`);
+      const data = await response.json();
+      return data.ingredients;
+    }
+    
+    getIngredientByName('lemon')
+      .then(data => console.log(data));
+  </code>
+</pre>
+
+As you can see from the code above, this is a Fetch API, which offers a flexible and powerful replacement for XMLHTTPRequest. There is <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">more information about Fetch API in MDN.</a>
 
 
     <!-- HW navigation links -->
